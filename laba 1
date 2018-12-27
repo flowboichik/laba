@@ -1,0 +1,96 @@
+Задание 1:
+static void Main(string[] args) 
+{ 
+for (int i = 1; i < 10; i++) 
+{ 
+for (int j = 1; j < 10; j++) 
+{ 
+Console.Write(i.ToString() + "*" + j.ToString() + "=" + i * j + " \t"); 
+} 
+Console.WriteLine(); 
+} 
+Console.ReadKey(true); 
+}
+
+ 
+Задание 2:
+static void Main(string[] args) 
+{ 
+Console.Write("Введите символ:"); 
+if (int.TryParse(Console.ReadLine(), out int c)) 
+Console.WriteLine("цифра!"); 
+else 
+Console.WriteLine(" не цифра"); 
+Console.ReadKey(true); 
+}
+ 
+ 
+ Задание 3:
+static void Main(string[] args) 
+{ 
+Console.WriteLine("Введите максимальное значение:"); 
+int max = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine("Введите минимальное значение:"); 
+int min = Convert.ToInt32(Console.ReadLine()); 
+Console.WriteLine(); 
+int[,] mass = new int[5, 12]; 
+Random org = new Random(); 
+for (int i = 0; i < 5; i++) 
+for (int j = 0; j < 12; j++) 
+{ 
+mass[i, j] = org.Next(min, max); 
+Console.Write("a[" + (i + 1) + "," + (j + 1) + "]=" + mass[i, j] + "\t"); 
+} 
+Console.WriteLine(); 
+Console.ReadKey(); 
+} 
+} 
+
+}
+ 
+Задание 4:
+ static void Main(string[] args)
+        {
+            Console.Write("Введите число:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 2; i <= n; i++)
+            {
+                if (i % 2 != 0)
+                    if (i % 3 != 0)
+                        if (i % 5 != 0)
+                            if (i % 7 != 0)
+                                Console.Write(i + ",");
+            }
+            Console.ReadKey();
+        }
+    }
+
+}
+ 
+Задание 5:
+static void Main(string[] args)
+        {
+            Console.Write("‚Введите номер месяца: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            if (a == 12 || a == 1 || a == 2)
+            {
+                Console.WriteLine("Зима");
+            }
+            else if (a == 3 || a == 4 || a == 5)
+            {
+                Console.WriteLine("‚Весна");
+            }
+            else if (a == 6 || a == 7 || a == 8)
+            {
+                Console.WriteLine("Лето");
+            }
+            else
+            {
+                Console.WriteLine("Осень");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+ 
+
